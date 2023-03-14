@@ -8,7 +8,7 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Varela Round', sans-serif;
     color: white;
-    background-color: rgb(32, 46, 10);
+    background-color: rgb(57, 61, 51);
     text-align: center;
     
 }
@@ -16,13 +16,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;    
-    background: linear-gradient(0deg, rgba(127,7,153,0.8241421568627451) 65%, rgba(32,46,10,.95) 100%);
+    background: linear-gradient(0deg, rgba(100,95,74,0.82) 55%, rgba(166, 162, 157, 0.95) 100%);
+    padding-left: 5px;
 
     .linkNav{
         text-decoration: none;
         color: white;
         font-size: 18px;
         font-family: 'Roboto', sans-serif;
+
         font-family: 'Varela Round', sans-serif;
         position: relative;
     }
@@ -32,7 +34,7 @@
         display: block;
         width: 0;
         height: 1.5px;
-        background: white;
+        background: rgba(166, 162, 157, 0.95);
         position: absolute;
         left: 50%;
         transition: all 0.6s;
@@ -41,30 +43,10 @@
         width: 100%;
         left: 0;
     }
-}
-
-.navCarrito{
-    display: flex;
-    align-items: center;
-      
-    .navNumCarrito{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 5px;
-        margin-left: 5px;
-        margin-bottom: 10px;
-        background-color: red;
-        color: white;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px; 
-        
-        p{
-            font-weight: bold;
-            
+    a{
+        img{
+            margin-top: 3px;
         }
     }
-
-   
 }
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './navbar.module.scss';
-import logo from './logoFinalSinFondo.png'
+import logo from './images-removebg-preview3.png'
+import CartWidget from '../CartWidget';
 
 const Navbar = () => {
   return (
@@ -11,21 +12,16 @@ const Navbar = () => {
         </div>
     <nav className={styles.navList}>
         
+        <a href="#" className={styles.linkNav}>Nosotros</a>
+        <a href="#" className={styles.linkNav}>Puntos de Venta</a>
        
         <a href= "#">
-            <img src={logo} alt="" height="40" width="70" />
+            <img src={logo} alt="" height="65" width="75" />
         </a> 
-        <a href="#" className={styles.linkNav}>Inicio</a>
-        <a href="#" className={styles.linkNav}>Nosotros</a>
         <a href="#" className={styles.linkNav}>Productos</a>
         <a href="#" className={styles.linkNav}>Contacto</a> 
         <a href="#">
-            <div className={styles.navCarrito}>
-                <box-icon name='cart'color='rgba(255,255,255,0.89)' ></box-icon>
-                <div className={styles.navNumCarrito} >
-                    <p>1</p>
-                </div>
-            </div>
+            <CartWidget/>
         </a>
     </nav>
     </div>
