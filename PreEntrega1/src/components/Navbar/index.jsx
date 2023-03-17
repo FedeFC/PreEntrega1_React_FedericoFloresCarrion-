@@ -14,7 +14,6 @@ const Navbar = () => {
         
         <a href="#" className={styles.linkNav}>Nosotros</a>
         <a href="#" className={styles.linkNav}>Puntos de Venta</a>
-       
         <a href= "#">
             <img src={logo} alt="" height="65" width="75" />
         </a> 
@@ -23,7 +22,7 @@ const Navbar = () => {
         <a href="#">
             <CartWidget/>
         </a>
-    </nav>
+    </nav> 
     </div>
   );
 }
