@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+
+.containerPadre{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+    // margin-top: 10px;
+    height: 90vh;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    
+    .containerImg{
+        width: 40%;
+        padding-top: 10%;
+    }
+
+    .containerDetail{
+        width: 60%;
+        background-color: rgb(62, 126, 144);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // height: fit-content;
+
+        h3{
+            color: rgb(193, 191, 191);
+            font-size: 38px;
+            margin-top: 30px;
+        }
+
+      
+        button{
+            margin: 0 auto;
+            margin-bottom: 4px;
+            color: black;
+            background-color: orange;
+            border: none;
+            border-radius: 4px;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Varela Round', sans-serif;
+            display: flex;
+            padding: 8px;
+
+            &:hover{
+                background-color: white;
+                color: orange;
+               
+                
+            }
+           
+        }
+
+
+        .priceDetail{
+         font-size: 25px;   
+         color: rgb(193, 191, 191);
+         
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .containerPadre{
+        
+        flex-direction: column;
+        .containerImg{
+            width: 100%;
+        }
+        .containerDetail{
+            width: 100%;
+            background-color: rgb(62, 126, 144);
+            font-family: 15px;
+    
+        }
+    }
+    
+}

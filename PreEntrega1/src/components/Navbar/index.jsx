@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './navbar.module.scss';
 import logo from './images-removebg-preview3.png'
 import CartWidget from '../CartWidget';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -10,17 +11,18 @@ const Navbar = () => {
             <div className={styles.enviosInfo}> 
                 <p>Envío Gratis para compras mayores a $20.000</p>
             </div>
+
             <nav className={styles.navList}>
-                <a href="#" className={styles.linkNav}>Nosotros</a>
-                <a href="#" className={styles.linkNav}>Puntos de Venta</a>
-                <a href= "#">
-                    <img src={logo} alt="" height="65" width="75" />
-                </a> 
-                <a href="#" className={styles.linkNav}>Productos</a>
-                <a href="#" className={styles.linkNav}>Contacto</a> 
-                <a href="#">
+              <Link to="/" className={styles.linkNav}>Home </Link>
+              <Link to='/puntosDeVenta'  className={styles.linkNav}> Puntos de Venta </Link>
+              <Link to='/'> <img src={logo} alt="" height="65" width="75" /> </Link>
+              <Link to="/products" className={styles.linkNav}>  Productos </Link>
+              <Link to="/contacto" className={styles.linkNav}>  Contacto </Link>
+              <Link to='/carrito' >
                     <CartWidget/>
-                </a>
+              </Link>
+                
+              
             </nav> 
     </div>
     

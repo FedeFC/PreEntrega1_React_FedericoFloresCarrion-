@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+
+
+.cardContainer{
+    display:inline-flex;
+    text-align: center;
+    align-items: center;
+    
+    justify-content: space-between;
+    flex-direction: column;
+    border: solid 1px rgb(62, 126, 144);
+    margin: 10px;
+    border-radius: 20px;
+    width: 30%;
+    height: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+
+   
+    
+   .preciosContainer{
+    background-color: rgba(62, 126, 144, 0.8);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 30%;
+
+    .precios{
+        color:white
+    }
+    
+   }
+   
+   &:hover{
+    transform: scale(1.028);
+    transition: transform 1.0s; 
+    
+  
+    }
+
+    .imagenes{
+        margin: 0 auto;
+        
+    }
+  
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+.navProducts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(62, 126, 144);
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+}
