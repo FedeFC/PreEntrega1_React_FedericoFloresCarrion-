@@ -17,6 +17,11 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Varela Round', sans-serif;
 
+    h3{
+        padding: 15px 20px;
+        color: rgb(147, 93, 0);
+        
+    }
    
     
    .preciosContainer{
@@ -24,23 +29,48 @@
     border-radius: 8px;
     margin-bottom: 5px;
     width: 30%;
+    border: rgb(128, 128, 128) 2px solid;
 
     .precios{
         color:white
     }
     
    }
-   
-   &:hover{
-    transform: scale(1.028);
-    transition: transform 1.0s; 
-    
-  
-    }
 
     .imagenes{
         margin: 0 auto;
-        
+       
+        &:hover{
+            transform: scale(1.098);
+            transition: transform 1.0s; 
+            }
+    }
+    .detallesBtn{
+        // background-color: orange;
+        background-color: rgba(62, 126, 144, 0.8);
+        border:none;
+        // border-radius:8px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+        height: 15%;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Varela Round', sans-serif;
+        font-weight: 500;
+        border-top: solid 3px rgb(202, 156, 71);
+       
+       
+
+        &:hover{
+            color:white;
+            background-color: rgb(202, 156, 71);
+            // background-color: rgba(62, 126, 144, 0.8);
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Varela Round', sans-serif;
+            transition: .7s;
+            
+        }
     }
   
 }

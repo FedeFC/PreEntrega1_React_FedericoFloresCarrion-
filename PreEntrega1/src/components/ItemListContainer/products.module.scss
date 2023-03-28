@@ -5,14 +5,35 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(62, 126, 144);
-    padding: 5px;
+    padding: 5px 200px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-family: 'Varela Round', sans-serif;
     
+    
     a{
         text-decoration: none;
         color: white;
+        position: relative;
+
+        &:after{
+            content:"";
+            display: block;
+            width: 0;
+            height: 1.5px;
+            background: rgba(255, 140, 0, 0.95);
+            position: absolute;
+            left: 50%;
+            transition: all 0.5s;
+        }
+
+        &:hover:after{
+            width: 100%;
+            left: 0;
+
+        }
     }
     
 }
+
+
