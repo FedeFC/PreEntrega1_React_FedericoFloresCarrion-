@@ -18,7 +18,7 @@ const Navbar = () => {
               <Link to='/'> <img src={logo} alt="" height="65" width="75" /> </Link>
               <Link to="/products" className={styles.linkNav}>  Productos </Link>
               <Link to="/contacto" className={styles.linkNav}>  Contacto </Link>
-              <Link to='/carrito' >
+              <Link to='/cart' >
                     <CartWidget/>
               </Link>
                 

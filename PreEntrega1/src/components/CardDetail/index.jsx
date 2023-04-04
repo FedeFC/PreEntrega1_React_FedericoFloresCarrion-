@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ItemCount from "../ItemQuantitySelector";
 import style from './cardDetail.module.scss'
 
 
@@ -15,6 +16,12 @@ const CardDatail = () => {
         });
     }, [id])
     
+    const [irAlCarrito, setirAlCarrito] = useState(false)
+
+    const onAdd = (cantidad) =>{
+        setirAlCarrito(true)
+
+    }
 
 return (
     <div className={style.containerPadre}>
@@ -26,11 +33,11 @@ return (
             <p>{`<< ${producto.category} >>`}</p>
             <p>{producto.description}</p>
             <p className={style.priceDetail}>$ {producto.price}</p>
-
-            <button>
-            <box-icon name='cart'color='rgb(0,0,0)' ></box-icon>
-                 Add to cart
-            </button>
+            <div>
+                {
+                    irAlCarrito ? <Link to='/cart'>Confirmar compra</Link> : <ItemCount initial={1} stock={10} onAdd ={onAdd} />
+                }
+            </div>
         </div>
     </div>
   )

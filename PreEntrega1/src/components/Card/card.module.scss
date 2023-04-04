@@ -37,14 +37,7 @@
     
    }
 
-    .imagenes{
-        margin: 0 auto;
-       
-        &:hover{
-            transform: scale(1.098);
-            transition: transform 1.0s; 
-            }
-    }
+   
     .detallesBtn{
         // background-color: orange;
         background-color: rgba(62, 126, 144, 0.8);
@@ -73,4 +66,12 @@
         }
     }
   
+    
+       
+        &:hover img{
+            
+            transform: scale(1.098);
+            transition: transform 1.0s; 
+            }
+    
 }
