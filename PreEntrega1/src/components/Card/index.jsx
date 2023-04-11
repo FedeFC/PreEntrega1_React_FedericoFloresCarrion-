@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+// import { CarritoContex } from '../../Context/index.jsx'
 import styles from './card.module.scss'
 
 const Card = ({producto}) => {
+
+
+  // const nombre = useContext(CarritoContex)
+  // console.log('item',nombre)
+
+
   return (
     <Link to={`/item/${producto.id}`} style={{textDecoration:'none'}} >
       <div className={styles.cardContainer}>

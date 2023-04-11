@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemCount from "../ItemQuantitySelector";
 import style from './cardDetail.module.scss'
+import { userCartContext } from '../../Context/index.jsx'
 
 
 const CardDatail = () => {
@@ -17,9 +18,11 @@ const CardDatail = () => {
     }, [id])
     
     const [irAlCarrito, setirAlCarrito] = useState(false)
+    const {addProduct} = userCartContext();
 
-    const onAdd = (cantidad) =>{
-        setirAlCarrito(true)
+    const onAdd = (quantity) =>{
+        setirAlCarrito(true);
+        addProduct(producto, quantity);
 
     }
 
