@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
+
+.itemCart{
+    display: flex;
+  
+    border-bottom: 1px solid gray;
+ 
+    margin: 1rem auto;
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    margin-bottom: 35px;
+    width: 100%;
+    border-spacing: 0;
+    line-height: 1;
+    padding: 5% 0;
+
+    .btnContainer{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        width:5%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            display: flex;
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            justify-content: center;
+            align-items: center;
+        
+        }
+    }
+    .imgContainer{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 3px;
+        
+        .imgProduct {
+        width: 100%;
+        height: 90px;
+        margin: 0 auto;
+        text-align: start; 
+        }
+    }
+
+    .itemTitle{
+        display: flex;
+        text-align: start;
+        justify-content: start;
+        padding: 5% 0;
+        width: 40%;
+
+  
+        
+    }
+    .itemPrice{
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .itemQuantity{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .itemSubtotal{
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}

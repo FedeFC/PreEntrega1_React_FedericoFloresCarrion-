@@ -2,20 +2,22 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ItemCount from "../ItemQuantitySelector";
 import style from './cardDetail.module.scss'
-import { userCartContext } from '../../Context/index.jsx'
+import { userCartContext } from '../../Context'
+import {getFirestore, doc ,getDoc} from 'firebase/firestore'
 
 
 const CardDatail = () => {
 
     const [producto, setProducto] = useState({})
     const {id}= useParams ();
+    
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`)
-        .then((response) => response.json())
-        .then((data) =>{
-            setProducto(data);
-        });
-    }, [id])
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb, 'products', id);
+        getDoc(queryDoc)
+        .then(res => setProducto({id: res.id, ...res.data()}))
+    },[id])
+
     
     const [irAlCarrito, setirAlCarrito] = useState(false)
     const {addProduct} = userCartContext();

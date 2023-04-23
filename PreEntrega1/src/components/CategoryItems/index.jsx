@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemListContainer from '../ItemListContainer'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+
 
 const CategoryItems = () => {
     
@@ -8,14 +10,15 @@ const CategoryItems = () => {
     const {id} = useParams()
 
     useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/category/${id}`)
-    .then((response) => response.json())
-    .then((data) => {
-        setProductos(data)
-    });
-    },[id])
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, 'products');
+      const queryFilter = query(queryCollection, where('category', '==', id))
+      getDocs(queryFilter)
+        .then(res => setProductos(res.docs.map(product =>({id: product.id, ...product.data() }))))
 
-    // console.log(id)
+      
+    },[id])
+  
 
   return (
     <div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../Card'
-// import Card from '../Card'
 import style from './products.module.scss'
 
 const ItemListContainer = ({productos}) => {

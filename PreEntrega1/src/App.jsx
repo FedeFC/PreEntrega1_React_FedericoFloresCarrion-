@@ -1,27 +1,29 @@
 import { createContext, useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import './App.css';
 import CardDatail from './components/CardDetail';
-import CartWidget from './components/CartWidget';
+import Cart from './components/Cart'
 import CategoryItems from './components/CategoryItems';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
-import CarritoProvider from './Context/index.jsx';
-
-
+import CarritoProvider from './Context/index.jsx'; 
+import './firebase/config'
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 function App() {
   
   
   const [productos, setProductos] = useState([])
+  const {id} = useParams()
+
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-    .then((response) => response.json())
-    .then((data) => {
-      setProductos(data)
-    } );
-    
-  }, []);
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, 'products');
+    getDocs(queryCollection)
+      .then(res => setProductos(res.docs.map(product =>({id: product.id, ...product.data() }))))
+  
+  },[id])
+  
   
 
   return (
@@ -34,6 +36,7 @@ function App() {
           <Route path='/products' element={<ItemListContainer productos={productos} /> } />
           <Route path='/item/:id' element={<CardDatail/>}/>
           <Route path='category/:id' element={<CategoryItems/>} />
+          <Route path='/cart' element ={<Cart/>} />
         </Routes>
       </CarritoProvider>
     </div>

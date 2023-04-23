@@ -10,11 +10,6 @@ export const CarritoProvider = ({children}) => {
 
     const [cart, setcart] = useState([]);
 
-    // const addProduct = (item, newQuantity) =>{
-    //     const newCart = cart.filter(prod => prod.id !== item.id);
-    //     newCart.push({...item, quantity : newQuantity});
-    //     setcart(newCart);
-    // }
     console.log('carrito : ', cart );
 
 
@@ -43,7 +38,7 @@ export const CarritoProvider = ({children}) => {
 
 
   return (
-    <div>
+    
         <CarritoContex.Provider value={{
             clearCart, 
             isInCart, 
@@ -51,13 +46,12 @@ export const CarritoProvider = ({children}) => {
             addProduct,
             totalPrice,
             totalProducts,
+            cart,
         }}>
             {children}
         </CarritoContex.Provider>
-        
-
-        
-    </div>
+             
+    
   )
 }
 
