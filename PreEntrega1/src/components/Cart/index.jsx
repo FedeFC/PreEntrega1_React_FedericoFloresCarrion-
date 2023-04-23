@@ -65,18 +65,22 @@ const Cart = () => {
       });
     };
 
-
+    let idUSer = ''
     const handleClick = () =>{
 
       const db = getFirestore()
       const orderCollection = collection(db, 'orders')
       addDoc(orderCollection,order)
-      .then(({id}) => console.log(id))   
-      
+      .then(({id}) => 
+        console.log(id)
+  
+        )
+       
+       
 
 
+       
     }
-    
    
   return (
   
@@ -138,7 +142,11 @@ const Cart = () => {
                 
               
             </form>
+           
           </div>
+          <div>
+              <p>ID de compra: ,{idUSer}</p>
+            </div>
       
       
             
