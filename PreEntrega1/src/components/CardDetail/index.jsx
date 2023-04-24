@@ -40,7 +40,12 @@ return (
             <p className={style.priceDetail}>$ {producto.price}</p>
             <div>
                 {
-                    irAlCarrito ? <Link to='/cart'>Confirmar compra</Link> : <ItemCount initial={1} stock={10} onAdd ={onAdd} />
+                    irAlCarrito ? 
+                    <div className={style.rutas}>
+                        <Link to='/products' className={style.enlaces}>Volver a productos</Link>
+                        <Link to='/cart' className={style.enlaces}>Confirmar compra</Link> 
+                    </div> : 
+                        <ItemCount initial={1} stock={10} onAdd ={onAdd} />
                 }
             </div>
         </div>

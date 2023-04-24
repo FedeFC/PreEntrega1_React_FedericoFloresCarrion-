@@ -65,16 +65,15 @@ const Cart = () => {
       });
     };
 
-    let idUSer = ''
+    
     const handleClick = () =>{
 
       const db = getFirestore()
       const orderCollection = collection(db, 'orders')
       addDoc(orderCollection,order)
       .then(({id}) => 
-        console.log(id)
-  
-        )
+        console.log(id))
+      
        
        
 
@@ -97,7 +96,7 @@ const Cart = () => {
           <div className={styles.totalPriceContainer}>
           
             <p>
-              TOTAL: <span>$ {totalPrice()}</span>
+              TOTAL: <span>$ {totalPrice().toFixed(2)}</span>
             </p>
           </div>
           
@@ -135,7 +134,7 @@ const Cart = () => {
                   }  class='email' name="email" onChange={handleInputChange}/>
                 </div>
                
-                  <input type="submit" value='Finalizar Compra' className={styles.inputContainerBtn} />
+                  <input type="submit" value='Finalizar Compra' className={styles.inputContainerBtn}  />
                
                
                 </div>
@@ -144,10 +143,7 @@ const Cart = () => {
             </form>
            
           </div>
-          <div>
-              <p>ID de compra: ,{idUSer}</p>
-            </div>
-      
+               
       
             
         </div>
