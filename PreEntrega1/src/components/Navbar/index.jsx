@@ -9,7 +9,7 @@ const Navbar = () => {
     
     <div className='contenederoNav'>
             <div className={styles.enviosInfo}> 
-                <p>Envío Gratis para compras mayores a $20.000</p>
+                <p>Envío Gratisssh para compras mayores a $20.000</p>
             </div>
 
             <nav className={styles.navList}>
